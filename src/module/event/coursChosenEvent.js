@@ -1,6 +1,7 @@
 
 
 export const coursChosenEvent = ()=>{
+    
     const  choseCour = (state,action)=>{
         // action: {type:"todo/selectCours,payload:{crenauId:1,coursIndex}}
         const {crenauId,coursIndex} = action.payload
@@ -27,7 +28,6 @@ export const coursChosenEvent = ()=>{
     }
 
     const addCourItem =(state,action)=>{
-
         const {coursIndex,crenauId,jourindex} = action.payload
         
         let cour = state.selectedCoursList.find(elementCour=>{
@@ -38,7 +38,7 @@ export const coursChosenEvent = ()=>{
             state.selectedCoursList = state.selectedCoursList.filter(cour => !((cour.coursIndex=== coursIndex)&&(cour.crenauId=== crenauId)));  
         }else{
             state.selectedCoursList = state.selectedCoursList.filter(cour=>!((cour.jourindex=== jourindex)&&(cour.crenauId=== crenauId)))
-            state.push(action.payload)
+            state.selectedCoursList.push(action.payload)
         }
         return state
     }

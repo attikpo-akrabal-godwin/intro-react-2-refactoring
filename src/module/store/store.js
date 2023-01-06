@@ -1,5 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { coursSlice } from "../slice/coursSlice";
 
 export const store = configureStore({
-    reducer:{}
+    reducer:{
+       coursSlice:coursSlice.reducer
+    }
 })

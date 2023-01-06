@@ -2,20 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 import { coursChosenEvent } from "../event/coursChosenEvent";
 import { fetchDataEvent } from "../event/fetchDataEvent";
 
-const initialState = {
+const initState = {
     isLoading:false,
     session:[],
     selectedCoursList:[],
     error:""
 }
 
-export const coursSlice =createSlice({
+export const coursSlice = createSlice({
     name:"coursSlice",
-    initialState,
-    reducer:{
+    initialState:initState,
+    reducers:{
         choseCourEvent: coursChosenEvent().choseCour,
         addCourItemEvent: coursChosenEvent().addCourItem
-
     },
     extraReducers:(builder)=>{
 
