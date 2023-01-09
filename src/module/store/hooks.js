@@ -46,7 +46,7 @@ export const selector = ()=>{
 }
 
 
-export const dispacther = ()=>{
+export const dispatcher = ()=>{
 
     const useAppdispatch = ()=>useDispatch()
     const dispatch = useAppdispatch() 
