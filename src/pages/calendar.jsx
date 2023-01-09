@@ -1,4 +1,5 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import { DropListCours } from "../components/dropListCours"
 import { Spinner } from "../components/spiner"
 import { Table } from "../components/table"
 import { dispatcher, selector } from "../module/store/hooks"
@@ -25,6 +26,7 @@ export const Calendar = ()=>{
             {errorView}
             <Head/>
             <main>
+                <DropListCours/>
                 <Table/>
             </main>
           </div> 

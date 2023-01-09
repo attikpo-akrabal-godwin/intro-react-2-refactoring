@@ -51,8 +51,8 @@ export const dispatcher = ()=>{
     const useAppdispatch = ()=>useDispatch()
     const dispatch = useAppdispatch() 
 
-    const useHandleOnClickCours = ({coursIndex,crenauId,jourindex,prix})=>{
-        dispatch(addCourItemEvent({coursIndex,crenauId,jourindex,prix}))
+    const useHandleOnClickCours = ({coursIndex,crenauId,jourindex,prix,nom})=>{
+        dispatch(addCourItemEvent({coursIndex,crenauId,jourindex,prix,nom}))
         dispatch(choseCourEvent({coursIndex,crenauId,jourindex}))
     }
 

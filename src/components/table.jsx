@@ -52,8 +52,8 @@ const CoursIterator = ()=>{
     const { useSelectSession  }= selector()
     const session = useSelectSession()
 
-    const  handleclick = ({coursIndex,crenauId,jourindex,prix})=>{
-        useHandleOnClickCours({coursIndex,crenauId,jourindex,prix})
+    const  handleclick = ({coursIndex,crenauId,jourindex,prix,nom})=>{
+        useHandleOnClickCours({coursIndex,crenauId,jourindex,prix,nom})
     }
     
     return (

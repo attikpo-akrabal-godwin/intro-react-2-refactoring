@@ -17,8 +17,8 @@ export const fetchDataEvent = ()=>{
         })
 
         const handleFetchCoursEventFulfilled = (state,action)=>{
-            state.isLoading = false
             state.session = action.payload
+            state.isLoading = false
             return state
         }
 
